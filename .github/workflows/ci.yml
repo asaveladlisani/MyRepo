@@ -15,6 +15,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -22,10 +24,14 @@ jobs:
         node-version: '14'
 
     - name: Install dependencies
-      run: npm install
-
+      run: |
+        cd path/to/your/subdirectory
+        npm install
+    
     - name: Run tests
-      run: npm test
+      run: |
+        cd path/to/your/subdirectory
+        npm test
 
     - name: Publish test results
       if: always()
