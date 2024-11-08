@@ -25,12 +25,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd myapp/package.json
+        cd myapp
         npm install
     
     - name: Run tests
       run: |
-        cd myapp/package.json
+        cd myapp
         npm test
 
     - name: Publish test results
