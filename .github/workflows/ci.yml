@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd myapp/*
+        cd myapp/package.json
         npm install
     
     - name: Run tests
